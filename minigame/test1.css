@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: rgb(140, 140, 140);
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	background-image: url(back.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+
+}
+
+
+.container_info {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	height: 140px;
+	background-color: transparent;
+}
+.volver_menu {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 340px;
+	background-image: url(fondo3.png);
+	height: 120px;
+	margin: 8px;
+	margin-right: 2px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 6px 2px #000;
+}
+.volver_menu > img {
+	display: inline;
+	background-color: transparent;
+	height: 13vh;
+	padding-top: 13px;
+	padding-left: 15px;
+	border-radius: 15px;
+	filter: drop-shadow(0px 0px 2px #bebebe);
+}
+.link_back_menu {
+	text-decoration: none;
+	font-size: 20px;
+	background-color: #000;
+	border: 2px solid rgb(22, 110, 22);
+	color: #fff;
+	display: inline-block;
+	align-self: center;
+	padding: 2vh;
+	margin-right: 36px;
+	filter: drop-shadow(0px 0px 2px #bebebe);
+	border-radius: 15px;
+	user-select: none;
+}
+.link_back_menu:hover {
+	background-color: #252525;
+	border: 2px solid rgb(29, 156, 29);
+	filter: drop-shadow(0px 0px 2px #d8d8d8);
+	user-select: none;
+}
+.menu_estadisticas {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(aciertos_movimientos.png);
+	width: 170px;
+	height: 80px;
+	margin: 8px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 6px 2px #000;
+	user-select: none;
+}
+.estadisticas {
+	display: inline;
+	font-size: 18px;
+	background-color: #000;
+	color: #fff;
+	height: 20px;
+	padding: 4px;
+	border-radius: 8px;
+	filter: drop-shadow(0px 0px 2px #bebebe);
+	border: 2px solid #7a7a7a;
+	user-select: none;
+}
+.mezclar-hover:hover {
+	background-color: #252525;
+	filter: drop-shadow(0px 0px 2px #d8d8d8);
+	border: 2px solid rgb(29, 156, 29);
+}
+
+
+
+
+
+.container_cards {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: auto;
+	height: 80vh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+}
+
+.cards {
+	position: relative;
+	display: inline-block;
+	width: 120px;    /*150 original y 180 altura */
+	height: 150px;
+	background-color: transparent;
+	visibility: visible;
+	margin: 16px;
+	border-radius: 10px;
+}
+.front {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	border-radius: 10px;
+	background-image: url("tarjeta_back.png");
+	transform: perspective(500px) rotateY(0deg);
+}
+.back {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	border-radius: 10px;
+	backface-visibility: hidden;
+	transform: perspective(500px) rotateY(180deg);
+}
+.back img {
+	border-radius: 10px;	
+}
+
+
+
+.hola{
+	border-radius: 10px;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+@keyframes visible {
+	0% {}
+	100%{visibility: hidden;}
+}
+
+@keyframes giro_card {
+	0% {}
+	100%{transform: perspective(500px) rotateY(180deg);}
+}
+@keyframes giro_card_reverse {
+	0% {}
+	100%{transform: perspective(500px) rotateY(360deg);}
+}
+
+@keyframes giro_card-atras {
+	0% {transform: perspective(500px) rotateY(180deg);}
+	100%{transform: perspective(500px) rotateY(0deg);}
+}
+@keyframes giro_card_reverse-atras {
+	0% {transform: perspective(500px) rotateY(360deg);}
+	100%{transform: perspective(500px) rotateY(180deg);}
+}
+
+.text_win {
+	position: absolute;
+	display: inline-block;
+	width: 600px;
+	/* min-width: 300px; */
+	height: 200px;
+	z-index: 3;
+	background-image: url(cartel-win.png);
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-70%);
+	border-radius: 16px;
+	box-shadow: 0px 0px 20px 2px #000;
+	animation: win_animation 2s linear infinite;
+}
+
+@keyframes win_animation{
+	0%{}
+	50%{transform: translate(-50%,-50%);}
+	100%{transform: translate(-50%,-70%);}
+}
+
+
+
+
+
+
+

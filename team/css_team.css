@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+	/* overflow-x: hidden; */
+	/* cursor: url(cursor.cur), auto; */
+	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
+	/* background-color: #eeeeee; */
+	/* user-select: none; */
+}
+@font-face {
+	font-family: LEMONMILK;
+	src: url(../fonts/LEMONMILK-Medium.otf);
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+.container_team_flex{
+	width: calc(100% - 60px);
+	background-color: #eeeeee;
+	padding: 30px;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+}
+.team_title{
+	width: calc(100% - 40px);
+	text-align: center;
+	padding: 20px;
+	font-size: 50px;
+	color: #00652e;
+	-webkit-box-reflect: below -54px linear-gradient(transparent, transparent, rgba(0,0,0,0.3));
+}
+.container_team{
+	margin: auto;
+	padding-top: 20px;
+	width: 90%;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.item_team{
+	min-width: 220px;
+	height: 400px;
+	box-shadow: 0 0 6px 0 #272222;
+	background-color: transparent;
+	border-radius: 8px;
+	margin: 10px 10px;
+	transform: skewX(-6deg);
+	display: flex;
+	flex-direction: column;
+}
+.img_person{
+	flex-grow: 1;
+	background-color: yellow;
+	border-radius: 8px 8px 0 0;
+}
+.info_person{
+	width: 100%;
+	background-color: #272222;
+	color: #eeeeee;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	list-style: none;
+	border-radius: 0 0 8px 8px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.li_infos_person{
+	padding: 4px 0;
+}
+.name_person{	
+	font-size: 20px;
+}
+.position_person{	
+	font-size: 16px;
+}
+.champions_person{
+	font-size: 10px;
+	display: inline;
+}
+.champions_person a {
+	display: inline;
+	cursor: pointer;
+	background-color: #0075c9;
+	color: #eeeeee;
+	border-radius: 30px;
+	padding: 3px 8px;
+	text-decoration: none;
+}
+.champions_person a:hover {
+	background-color: #00518a;
+}
+
+

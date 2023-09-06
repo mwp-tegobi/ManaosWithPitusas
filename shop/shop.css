@@ -1,0 +1,167 @@
+* {
+	padding: 0;
+	margin: 0;
+	/* overflow-x: hidden; */
+	/* cursor: url(cursor.cur), auto; */
+	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
+	/* background-color: #eeeeee; */
+	/* user-select: none; */
+}
+@font-face {
+	font-family: LEMONMILK;
+	src: url(../fonts/LEMONMILK-Medium.otf);
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+.container_team_flex{
+	width: calc(100% - 60px);
+	background-color: #eeeeee;
+	padding: 30px;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+}
+.team_title{
+	width: calc(100% - 40px);
+	text-align: center;
+	padding: 20px;
+	font-size: 50px;
+	color: #00652e;
+	-webkit-box-reflect: below -54px linear-gradient(transparent, transparent, rgba(0,0,0,0.3));
+}
+.container_team1, .container_team2{
+	margin: auto;
+	padding-top: 20px;
+	width: 90%;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.item_team{
+	min-width: 220px;
+	height: 400px;
+	box-shadow: 0 0 6px 0 #272222;
+	background-color: transparent;
+	border-radius: 8px;
+	margin: 10px 10px;
+	transform: skewX(-6deg);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.img_person{
+	height: 100%;
+	border-radius: 8px 8px 0 0;
+}
+.item_team:hover .img_person{
+	filter: blur(2px);
+}
+
+/* ----------------------------------- container deplegar img de los costados*/
+.img_person_izq{
+	height: 100%;
+	position: absolute;
+	left: -30px;
+	opacity: 0;
+	border-radius: 8px 8px 0 0;
+	transition: .6s;
+}
+.img_person_der{
+	height: 100%;
+	position: absolute;
+	right: -30px;
+	opacity: 0;
+	border-radius: 8px 8px 0 0;
+	transition: .6s;
+}
+.item_team:hover .img_person_der{
+	right: 0;
+	opacity: 1;
+	transition: .6s;
+}
+.item_team:hover .img_person_izq{
+	left: 0;
+	opacity: 1;
+	transition: .6s;
+}
+/* ----------------------------------- container deplegar tamaños ropa */
+.item_size_container{
+	width: 80%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	bottom: -50px;
+	left: 10%;
+	list-style: none;
+	opacity: 0;
+}
+.size_item input{
+	display: none;
+}
+.size_item{
+	background-color: #d1d1d1;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-bottom: 6px;
+}
+.size_item label{
+	color: #001781;
+	user-select: none;
+	width: 25%;
+	font-size: 16px;
+	padding: 6px 0;
+	text-align: center;
+	border-right: 1px solid #272222;
+}
+.size_item label:hover{
+	background-color: #0075c9;
+	color: #eeeeee;
+}
+.size_item label:last-child{
+	border-right: 0px;
+}
+.size_item input:checked + label{
+	background-color: #00518a;
+	color: #eeeeee;
+}
+.item_team:hover .item_size_container{
+	bottom: 30px;
+	opacity: 1;
+	transition: .6s;
+}
+
+/* ----------------------------------- container deplegar costo ropa */
+.cost_item{
+	width: 80%;
+	height: 50px;
+	background-color: rgba(39, 34, 34,.5);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	top: -30px;
+	left: 10%;
+	padding: 4px 0;
+	list-style: none;
+	opacity: 0;
+	text-align: center;
+	color: #eeeeee;
+	transition: .6s;
+	border-radius: 8px;
+}
+.cost_item p:first-child{
+	font-size: 24px;
+}
+.cost_item p:last-child{
+	font-size: 12px;
+}
+.item_team:hover .cost_item{
+	top: 10px;
+	opacity: 1;
+	transition: .6s;
+}

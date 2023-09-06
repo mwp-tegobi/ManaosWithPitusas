@@ -1,0 +1,64 @@
+* {
+	padding: 0;
+	margin: 0;
+	/* overflow-x: hidden; */
+	/* cursor: url(cursor.cur), auto; */
+	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
+	/* background-color: #eeeeee; */
+	/* user-select: none; */
+}
+@font-face {
+	font-family: LEMONMILK;
+	src: url(../../fonts/LEMONMILK-Medium.otf);
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+.inicio_equipo_container{
+	width: calc(100% - 60px);
+	min-height: 620px;
+	background-color: #eeeeee;
+	background-image: url(../../images/bakckground_coach.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 30px;
+	margin-top: 60px;
+	border-bottom: 2px solid #272222;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+.inicio_equipo_container h1{
+	text-align: center;
+	font-size: 40px;
+	color: #00652e;
+	padding: 20px;
+	-webkit-box-reflect: below -40px linear-gradient(transparent,transparent, rgba(0,0,0,0.7));
+
+}
+.text_inicio{
+	padding: 10px;
+	margin-top: 40px;
+	background-color: rgba(200, 200, 200,.3);
+}
+.inicio_equipo_container img{
+	height: 300px;
+	object-fit: contain;
+	margin-top: 10px;
+}
+
+@media (min-width: 150px) and (max-width: 500px){
+	.origen_name{ flex-wrap: wrap;}
+	.origen_img_container{
+		flex-direction: row;
+		width: 100%;
+	}
+	.origen_img_container img{ width: 50%;}
+	.origen_text_container{	margin: 10px 0 0 0;}
+	.origen_text_container p{ margin-top: 10px;}
+	.name_letter{ text-align: center;}
+}
