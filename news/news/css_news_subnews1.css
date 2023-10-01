@@ -1,81 +1,60 @@
-* {
-	padding: 0;
-	margin: 0;
-	/* overflow-x: hidden; */
-	/* cursor: url(cursor.cur), auto; */
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-	/* background-color: #eeeeee; */
-	/* user-select: none; */
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../../fonts/LEMONMILK-Medium.otf);
-}
-
-
-
-
-/* -------------------------------------------------------------------------------------------------------------- */
-.inicio_equipo_container{
+.inicio_equipo_container {
 	width: calc(100% - 60px);
 	min-height: 620px;
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	background-image: url(../../images/bakckground_inicio_team.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	padding: 30px;
 	margin-top: 60px;
-	border-bottom: 2px solid #272222;
+	border-bottom: 2px solid var(--main-black-super-272222);
 	display: flex;
 	flex-direction: column;
 	list-style: none;
 }
-.inicio_equipo_container h1{
+.inicio_equipo_container h1 {
 	text-align: center;
 	font-size: 40px;
-	color: #00652e;
+	color: var(--main-verde-oscuro-00652e);
 	padding: 20px;
 	-webkit-box-reflect: below -40px linear-gradient(transparent,transparent, rgba(0,0,0,0.7));
-
 }
-.text_inicio{
+.text_inicio {
 	padding: 10px;
 	margin-top: 40px;
-	background-color: rgba(200, 200, 200,.3);
+	text-align: center;
 }
-h2{
-	color: #00652e;
+h2 {
+	color: var(--main-verde-oscuro-00652e);
 	text-align: center;
 	padding: 30px;
 	font-size: 30px;
 	-webkit-box-reflect: below -64px linear-gradient(transparent,transparent, rgba(0,0,0,0.7));
 }
-.origen_name{
+.origen_name {
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
-	background-color: rgba(200, 200, 200,.3);
 }
-.origen_img_container{
+.origen_img_container {
 	padding: 10px;
 	width: 200px;
 	display: flex;
 	flex-direction: column;
 }
-.origen_text_container{
+.origen_text_container {
 	text-align: center;
 	flex-grow: 1;
 	margin-left: 40px;
 }
-.name_letter{
+.name_letter {
 	width: 130px;
 	padding: 4px;
 	border-radius: 4px;
 	text-align: left;
 	margin-top: 4px;
-	color: #001781;
-	
+	color: var(--main-azul-oscuro-001781);
 }
 
 @media (min-width: 150px) and (max-width: 500px){
@@ -89,4 +68,3 @@ h2{
 	.origen_text_container p{ margin-top: 10px;}
 	.name_letter{ text-align: center;}
 }
-

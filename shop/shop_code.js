@@ -63,9 +63,9 @@ function cargarProductos() {
         let divItem = document.createElement("li");
         divItem.classList.add("item_team");
         divItem.innerHTML = `
-                <img class="img_person" src="${product.img}">
-                <img class="img_person_izq" src="../images/others/item_izq.png">
-                <img class="img_person_der" src="../images/others/item_der.png">
+                <img loading="lazy" class="img_person" src="${product.img}">
+                <img loading="lazy" class="img_person_izq" src="../images/others/item_izq.png">
+                <img loading="lazy" class="img_person_der" src="../images/others/item_der.png">
                 <form class="item_size_container">
                     <button type="submit" id="${product.name}" class="btn_add_to_cart">add to car</button>
                 </form>

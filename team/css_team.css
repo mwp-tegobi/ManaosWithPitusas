@@ -1,21 +1,6 @@
-* {
-	padding: 0;
-	margin: 0;
-	/* overflow-x: hidden; */
-	/* cursor: url(cursor.cur), auto; */
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-	/* background-color: #eeeeee; */
-	/* user-select: none; */
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../fonts/LEMONMILK-Medium.otf);
-}
-
-/* -------------------------------------------------------------------------------------------------------------- */
 .container_team_flex{
 	width: calc(100% - 60px);
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	padding: 30px;
 	margin-top: 60px;
 	display: flex;
@@ -26,7 +11,7 @@
 	text-align: center;
 	padding: 20px;
 	font-size: 50px;
-	color: #00652e;
+	color: var(--main-verde-oscuro-00652e);
 	-webkit-box-reflect: below -54px linear-gradient(transparent, transparent, rgba(0,0,0,0.3));
 }
 .container_team{
@@ -41,7 +26,7 @@
 .item_team{
 	min-width: 220px;
 	height: 400px;
-	box-shadow: 0 0 6px 0 #272222;
+	box-shadow: 0 0 6px 0 var(--main-black-super-272222);
 	background-color: transparent;
 	border-radius: 8px;
 	margin: 10px 10px;
@@ -49,15 +34,19 @@
 	display: flex;
 	flex-direction: column;
 }
+.item_team:not(:visited){	text-decoration: none;}
+.item_team:visited{	text-decoration: none;}
+.item_team:hover .li_infos_person{  color: var(--main-azul-claro-1fa2ff);}
+.item_team:hover .champions_person{  color: var(--main-azul-claro-0075c9);}
+
 .img_person{
 	flex-grow: 1;
-	background-color: yellow;
 	border-radius: 8px 8px 0 0;
 }
 .info_person{
 	width: 100%;
-	background-color: #272222;
-	color: #eeeeee;
+	background-color: var(--main-black-super-272222);
+	color: var(--main-white-eeeeee);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -67,30 +56,11 @@
 	box-sizing: border-box;
 	padding: 10px;
 }
-.li_infos_person{
-	padding: 4px 0;
-}
-.name_person{	
-	font-size: 20px;
-}
-.position_person{	
-	font-size: 16px;
-}
+.li_infos_person{  padding: 4px 0;}
+.name_person{  font-size: 20px;}
+.position_person{  font-size: 16px;}
+
 .champions_person{
 	font-size: 10px;
 	display: inline;
 }
-.champions_person a {
-	display: inline;
-	cursor: pointer;
-	background-color: #0075c9;
-	color: #eeeeee;
-	border-radius: 30px;
-	padding: 3px 8px;
-	text-decoration: none;
-}
-.champions_person a:hover {
-	background-color: #00518a;
-}
-
-

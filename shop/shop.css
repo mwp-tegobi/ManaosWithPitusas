@@ -1,22 +1,6 @@
-* {
-	padding: 0;
-	margin: 0;
-	/* overflow-x: hidden; */
-	/* cursor: url(cursor.cur), auto; */
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-	/* background-color: #eeeeee; */
-	/* user-select: none; */
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../fonts/LEMONMILK-Medium.otf);
-}
-
-
-/* -------------------------------------------------------------------------------------------------------------- */
 .container_team_flex{
 	width: calc(100% - 60px);
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	padding: 30px;
 	margin-top: 60px;
 	display: flex;
@@ -27,7 +11,7 @@
 	text-align: center;
 	padding: 20px;
 	font-size: 50px;
-	color: #00652e;
+	color: var(--main-verde-oscuro-00652e);
 	-webkit-box-reflect: below -54px linear-gradient(transparent, transparent, rgba(0,0,0,0.3));
 }
 .container_team1, .container_team2{
@@ -42,7 +26,7 @@
 .item_team{
 	min-width: 220px;
 	height: 400px;
-	box-shadow: 0 0 6px 0 #272222;
+	box-shadow: 0 0 6px 0 var(--main-black-super-272222);
 	background-color: transparent;
 	border-radius: 8px;
 	margin: 10px 10px;
@@ -55,9 +39,7 @@
 	height: 100%;
 	border-radius: 8px 8px 0 0;
 }
-.item_team:hover .img_person{
-	filter: blur(2px);
-}
+.item_team:hover .img_person{	filter: blur(2px);}
 
 /* ----------------------------------- container deplegar img de los costados*/
 .img_person_izq{
@@ -102,7 +84,7 @@
 	display: none;
 }
 .size_item{
-	background-color: #d1d1d1;
+	background-color: var(--main-white-claro-d1d1d1);
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -116,18 +98,18 @@
 	font-size: 16px;
 	padding: 6px 0;
 	text-align: center;
-	border-right: 1px solid #272222;
+	border-right: 1px solid var(--main-black-super-272222);
 }
 .size_item label:hover{
-	background-color: #0075c9;
-	color: #eeeeee;
+	background-color: var(--main-azul-claro-0075c9);
+	color: var(--main-white-eeeeee);
 }
 .size_item label:last-child{
 	border-right: 0px;
 }
 .size_item input:checked + label{
-	background-color: #00518a;
-	color: #eeeeee;
+	background-color: var(--main-azul-medio-00518a);
+	color: var(--main-white-eeeeee);
 }
 .item_team:hover .item_size_container{
 	bottom: 30px;
@@ -139,7 +121,7 @@
 .cost_item{
 	width: 80%;
 	height: 50px;
-	background-color: rgba(39, 34, 34,.5);
+	background-color: #27222280;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -150,16 +132,13 @@
 	list-style: none;
 	opacity: 0;
 	text-align: center;
-	color: #eeeeee;
+	color: var(--main-white-eeeeee);
 	transition: .6s;
 	border-radius: 8px;
 }
-.cost_item p:first-child{
-	font-size: 24px;
-}
-.cost_item p:last-child{
-	font-size: 12px;
-}
+.cost_item p:first-child{	font-size: 24px;}
+.cost_item p:last-child{	font-size: 12px;}
+
 .item_team:hover .cost_item{
 	top: 10px;
 	opacity: 1;

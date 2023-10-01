@@ -1,25 +1,28 @@
-
-
 const replays_js = document.querySelectorAll(".replays_js");
 const videos_items = document.querySelectorAll(".videos_items");
 const replays_videos_container = document.querySelector(".replays_videos_container");
-const videos_replay_close = document.querySelector(".videos_replay_close");
+const boton_close = document.querySelector(".boton_close");
+const body_container3 = document.querySelector(".body_container");
 
 
 replays_js.forEach((el,ind) =>{
     el.addEventListener("click", ()=>{
         replays_videos_container.classList.toggle("replay_display");
+        body_container3.style.overflowY = "hidden";
         
         videos_items.forEach((elVideo,indexVideo) =>{
-            if(ind === indexVideo) elVideo.classList.add("videos_items_display")
+            if(ind === indexVideo) {
+                elVideo.classList.add("videos_items_display");
+            }
         })        
     })
 })
-videos_replay_close.addEventListener("click", ()=>{
+boton_close.addEventListener("click", ()=>{
     replays_videos_container.classList.toggle("replay_display");
+    body_container3.style.overflowY = "visible";
     
     videos_items.forEach((elVideo,indexVideo) =>{
-            elVideo.classList.remove("videos_items_display")
+            elVideo.classList.remove("videos_items_display");
             elVideo.pause();
     }) 
 })
@@ -30,11 +33,7 @@ const menu_responsive_display = document.querySelector(".menu_responsive_display
 const close_menu_responsive = document.querySelector(".close_menu_responsive");
 
 menu_responsive.addEventListener("click", ()=>{
-        body_container.style.overflowY = "hidden";
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        })
+    body_container.style.overflowY = "hidden";
     menu_responsive_display.style.display = "flex";
     
     close_menu_responsive.addEventListener("click", ()=>{
@@ -49,7 +48,6 @@ menu_responsive.addEventListener("click", ()=>{
 // ----------------------------------   slider automatico inicio    ----------------------------------------------
 const slider_container = document.querySelector(".slider_container")
 const slider_items = document.querySelectorAll(".slider_items");
-
 
 setInterval(() => {
     moveToRight()

@@ -1,37 +1,25 @@
 :root {
 	--main-white-eeeeee: #eeeeee;
+	--main-white-dbdbdb: #dbdbdb;
 	--main-white-claro-d1d1d1: #d1d1d1;
 	--main-white-grey-adadad: #adadad;
+	--main-white-grey-cecece: #cecece;
+
 	--main-white-grey-claro-909090: #909090;
 	--main-white-grey-menosclaro-808080: #808080;
 	--main-white-grey-oscuro-505050: #505050;
+
 	--main-black-121212: #121212;
 	--main-black-super-272222: #272222;
 	--main-black-claro-303030: #303030;
 
+	--main-azul-claro-1fa2ff: #1fa2ff;
+	--main-azul-claro-22a3ff: #22a3ff;
 	--main-azul-claro-0075c9: #0075c9;
 	--main-azul-medio-00518a: #00518a;
+	--main-azul-oscuro-001fa8: #001fa8;
 	--main-azul-oscuro-001781: #001781;
 
 	--main-verde-claro-2f9158: #2f9158;
 	--main-verde-oscuro-00652e: #00652e;
 }
-
-
-* {
-	padding: 0;
-	margin: 0;
-	/* overflow-x: hidden; */
-	/* cursor: url(cursor.cur), auto; */
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-	/* background-color: #eeeeee; */
-	/* user-select: none; */
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../fonts/LEMONMILK-Medium.otf);
-}
-/* .body_container{
-	overflow-y: hidden;
-} */
-

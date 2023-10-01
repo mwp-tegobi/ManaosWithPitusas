@@ -12,8 +12,6 @@
 	box-sizing: border-box;
 	padding: 30px;
 }
-
-
 .img_inicio_pagina{
 	width: 200px;
 }
@@ -21,7 +19,6 @@
 	text-align: center;
 	font-size: 18px;
 	line-height: 30px;
-
 }
 .text2_inicio_pagina{
 	margin: 20px;
@@ -37,7 +34,6 @@
 	border-radius: 50%;
 	border-right-color: transparent;
 	animation: animation_circle_inicio_pagina 1.2s linear infinite;
-
 }
 @keyframes animation_circle_inicio_pagina{
 	100%{	transform: rotate(360deg);}
@@ -263,15 +259,20 @@
 	margin: 4px;
 	width: 280px;
 	height: 470px;
+	box-shadow: 0 0 6px 0px var(--main-black-super-272222);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	text-decoration: none;
+	border-radius: 6px;
 }
+.noticia_item:visited{	color: var(--main-white-eeeeee);}
+.noticia_item:not(:visited){	color: var(--main-white-eeeeee);}
+
 .news_img{
 	object-fit: cover;
 	width: 100%;
 	flex-grow: 1;
-	background-color: red;
 	border-radius: 6px 6px 0 0;
 }
 .news_text{
@@ -286,7 +287,6 @@
 	align-items: center;
 }
 .mas_info_news_link {
-	text-decoration: none;
 	background-color: var(--main-azul-oscuro-001781);
 	font-size: 12px;
 	text-align: center;
@@ -379,7 +379,7 @@
 
 
 
-/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------		replays container	-------------------------------------------------- */
 .replays_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -418,8 +418,9 @@
 	display: flex;
 	flex-direction: column;
 	color: var(--main-white-eeeeee);
+	background-color: red;
 }
-.replays_opgg div:first-child{
+.replays_opgg > p{
 	background-color: var(--main-azul-oscuro-001781);
 	color: var(--main-white-eeeeee);
 	margin-top: 0;
@@ -427,7 +428,7 @@
 	width: 90%;
 	border-radius: 4px;
 }
-.replays_opgg div {
+.name_account {
 	border-radius: 4px;
 	width: 85%;
 	box-sizing: border-box;
@@ -436,20 +437,15 @@
 	margin: 8px 0;
 	background-color: var(--main-black-super-272222);
 	transform: skew(-2deg, -3deg);
+	text-decoration: none;
 }
-.replays_opgg div:hover:not(:first-child){
+.name_account:hover:not(:first-child){
 	background-color: var(--main-white-grey-oscuro-505050);
 	margin-left: 10px;
 }
-.name_account{
-	text-decoration: none;
-}
-.name_account:visited{
-	color: var(--main-white-eeeeee);
-}
-.name_account:not(:visited){
-	color: var(--main-white-eeeeee);
-}
+.name_account:visited{	color: var(--main-white-eeeeee);}
+.name_account:not(:visited){	color: var(--main-white-eeeeee);}
+
 .replays_video_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -459,30 +455,32 @@
 	height: 600px;
 	margin: 0 0 10px 50px;
 }
-.main_replay{
-	position: relative;
-	width: 66%;
-}
+.main_replay{	width: 66%;}
+
 .main_replay p {
 	text-align: center;
 	padding: 10px;
 	font-size: 24px;
 	margin-bottom: 4px;
 }
+.img_replays_main_general{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 .img_replays_main{
 	border-radius: 6px;
 	width: 100%;
+	height: 100%;
 }
-.hover_replay_play{	
-	display: none;
-}
+.hover_replay_play{	display: none;}
+
 .main_replay:hover .hover_replay_play{
-	display: inline;
+	display: inline-flex;
 	border-radius: 6px;
 	width: 100%;
-	height: 332px;
+	height: 99%;
 	position: absolute;
-	top: 56px;
 	left: 0;
 	z-index: 100;
 	background-color: rgba(0,0,0,0.2);
@@ -500,6 +498,15 @@
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
+}
+.others_replay_container::-webkit-scrollbar{
+	background-color: var(--main-azul-oscuro-001781);
+	width: 12px;
+	border-radius: 20px;
+}
+.others_replay_container::-webkit-scrollbar-thumb{
+	background: linear-gradient(90deg, rgba(0,117,201,1) 0%, rgba(0,117,201,1) 15%, rgba(6,80,168,1) 60%, rgba(0,59,101,1) 100%);
+	border-radius: 20px;
 }
 .li_other_replay{
 	position: relative;
@@ -541,9 +548,7 @@
 	color: var(--main-verde-oscuro-00652e);
 }
 .play_replay_main{
-	margin: 125px 0 0 225px;
-	padding-left: 22px;
-	padding-top: 10px;
+	margin: auto;
 }
 
 @media (min-width: 150px) and (max-width: 763px){
@@ -558,15 +563,17 @@
 }
 
 .replays_videos_container{
-	position: absolute;
+	position: fixed;
 	z-index: 20000;
 	width: 100%;
 	height: 100%;
+	top: 0;
 	background-color: rgba(0,0,0,0.6);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	overflow-y: hidden;
 }
 .replay_display{
 	display: none;
@@ -574,30 +581,50 @@
 .replays_videos_style{
 	border-radius: 20px;
 	position: relative;
-	width: 80%;
-	height: 94%;
+	width: calc(100vw - 40px);
+	height: calc(100vh - 40px);
 	background-color: var(--main-white-eeeeee);
-	padding: 20px;
 	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container_videos{
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .videos_items{
-	border-radius: 12px;
 	display: none;
 	position: absolute;
 	z-index: 200;
-	width: calc(100% - 40px);
 }
 .videos_items_display{
 	display: inline;
 	z-index: 210;
+	width: calc(100% - 40px);
+	height: calc(100% - 120px);
+	border-radius: 12px;
+	background-color: var(--main-white-dbdbdb);
 }
 .videos_replay_close{
-	width: 50px;
-	height: 50px;
-	background-color: red;
-	position: absolute;
-	top: 0;
-	right: 0;
+	display: flex;
+	width: 100%;
+	height: 70px;	
+	background-color: var(--main-white-dbdbdb);
+	border-radius: 14px;
+}
+.boton_close{
+	width: 60px;
+	height: 60px;
+	margin: auto auto;
+	background-image: url(../images/close-icon.png);
+	background-size: cover;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 
@@ -661,15 +688,15 @@
 	font-size: 16px;
 	padding: 8px 40px;
 	text-align: center;
-	/* width: 140px; */
-	/* height: 40px; */
 	border-radius: 4px;
 	background-color: var(--main-azul-medio-00518a);
 	transform: skew(2deg, 3deg);
 	cursor: pointer;
+	text-decoration: none;
+	color: var(--main-white-eeeeee);
 }
 .partner_button:hover{
-	background-color: var(--main-azul-oscuro-001781);
+	background-color: var(--main-azul-oscuro-001fa8);
 }
 .partners_img{
 	display: flex;
@@ -688,9 +715,6 @@
 	margin-left: 20px;
 }
 
-
-
-
 @media (min-width: 150px) and (max-width: 1000px){
     .partners_img{margin: 0 0 10px 0;}
 }
@@ -700,6 +724,3 @@
 	.partners_us{					-webkit-box-reflect: below -80px linear-gradient(transparent,transparent, #00000099);}
 	.partners_click{				margin-top: 30px;}
 }
-
-
-

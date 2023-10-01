@@ -1,28 +1,10 @@
-* {
-	padding: 0;
-	margin: 0;
-	/* overflow-x: hidden; */
-	/* cursor: url(cursor.cur), auto; */
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-	/* background-color: #eeeeee; */
-	/* user-select: none; */
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../fonts/LEMONMILK-Medium.otf);
-}
-
-
-
-
-/* -------------------------------------------------------------------------------------------------------------- */
 .container_news{
 	width: calc(100% - 60px);
 	min-height: 620px;
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	padding: 30px;
 	margin-top: 60px;
-	border-bottom: 2px solid #272222;
+	border-bottom: 2px solid var(--main-black-super-272222);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -30,43 +12,42 @@
 }
 .news_item{
 	width: 240px;
-	height: 340px;
-	background-color: red;
+	height: 380px;
 	display: flex;
 	flex-direction: column;
 	border-radius: 12px;
-	box-shadow: 0 0 4px 2px #272222;
-	border: 1px solid #eeeeee;
+	box-shadow: 0 0 4px 2px var(--main-black-super-272222);
+	border: 1px solid var(--main-white-eeeeee);
 	margin: 8px 0;
 }
+.news_item:not(:visited){	text-decoration: none;}
+.news_item:visited{	text-decoration: none;}
+.news_item:not(:hover){	transform: scale(.95);}
+.news_item:hover .mas_info_news{  color: var(--main-azul-claro-1fa2ff);}
+.news_item:hover .mas_info_news:last-child{  color: var(--main-azul-claro-0075c9);}
+
 .news_item img{
 	object-fit: cover;
 	width: 100%;
 	height: 80%;
-	background-color: #00518a;
+	background-color: var(--main-azul-medio-00518a);
 	border-radius: 12px 12px 0 0;
 }
 .news_title{
-	border-top: 2px solid #eeeeee;
+	border-top: 2px solid var(--main-white-eeeeee);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	width: 100%;
 	height: 20%;
-	background-color: #272222;
+	background-color: var(--main-black-super-272222);
 	border-radius: 0 0 12px 12px;
-	
 }
-.news_title p, .news_title a{
+.news_title p{
 	text-decoration: none;
-	color: #eeeeee;
+	color: var(--main-white-eeeeee);
 	text-align: center;
-}
-.news_title a:hover{
-	color: aqua;
 }
 .mas_info_news{
 	font-size: 12px;
 }
-
-

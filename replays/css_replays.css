@@ -1,22 +1,9 @@
-* {
-	padding: 0;
-	margin: 0;
-	font-family: LEMONMILK,Arial, Helvetica, sans-serif;
-}
-@font-face {
-	font-family: LEMONMILK;
-	src: url(../fonts/LEMONMILK-Medium.otf);
-}
-
-
-
-/* -------------------------------------------------------------------------------------------------------------- */
 .container_replay_play{
 	width: calc(100% - 60px);
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	padding: 30px;
 	margin-top: 60px;
-	border-bottom: 2px solid #272222;
+	border-bottom: 2px solid var(--main-black-super-272222);
 	display: flex;
 	justify-content: center;
 }
@@ -41,7 +28,7 @@
 .container_all_replays{
 	width: calc(100% - 60px);
 	padding: 16px 30px 30px 30px;
-	background-color: #eeeeee;
+	background-color: var(--main-white-eeeeee);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -50,15 +37,13 @@
 	padding: 0px 0 20px 0;
 	font-size: 40px;
 	text-align: center;
-	color: #00652e;
-	/* background-color: #eeeeee; */
+	color: var(--main-verde-oscuro-00652e);
 	-webkit-box-reflect: below -50px linear-gradient(transparent,transparent, rgba(0,0,0,.8));
 }
 .replays_container{
 	padding-top: 20px;
 	list-style: none;
 	width: 100%;
-	/* background-color: yellow; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -66,7 +51,6 @@
 .replay_item{
 	margin: 5px;
 	height: 130px;
-	background-color: red;
 	border-radius: 8px;
 	position: relative;
 }
@@ -82,9 +66,9 @@
 	margin-left: 20%;
 	bottom: 0px;
 	left: 0px;
-	color: #eeeeee;
+	color: var(--main-white-eeeeee);
 	padding: 2px;
-	background-color: #0075c9;
+	background-color: var(--main-azul-claro-0075c9);
 	border-radius: 30px;
 	width: 60%;
 	text-align: center;
